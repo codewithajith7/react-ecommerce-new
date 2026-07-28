@@ -456,6 +456,10 @@ body.dark .hamburger-btn:hover {
     background: rgba(255, 255, 255, 0.08);
 }
 
+.mobile-header-actions {
+    display: none;
+}
+
 
 /* ==========================
         RESPONSIVE
@@ -471,6 +475,42 @@ body.dark .hamburger-btn:hover {
 }
 
 @media(max-width:768px){
+    .mobile-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header-logout-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(239, 68, 68, 0.08);
+        border: none;
+        color: #ef4444;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    body.dark .header-logout-btn {
+        background: rgba(239, 68, 68, 0.2);
+        color: #f87171;
+    }
+
+    .header-logout-btn:hover {
+        background: #ef4444;
+        color: white;
+    }
+
+    body.dark .header-logout-btn:hover {
+        background: #ef4444;
+        color: white;
+    }
+
     .hamburger-btn {
         display: flex;
     }
@@ -492,6 +532,7 @@ body.dark .hamburger-btn:hover {
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.08);
         transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         z-index: 1000;
+        overflow-y: auto;
     }
 
     body.dark .nav-item-container {

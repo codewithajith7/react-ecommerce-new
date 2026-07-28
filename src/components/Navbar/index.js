@@ -37,13 +37,24 @@ const Navbar = () => {
         ShopNest
       </h1>
 
-      <button
-        className="hamburger-btn"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle navigation menu"
-      >
-        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-      </button>
+      <div className="mobile-header-actions">
+        {user && (
+          <button
+            className="header-logout-btn"
+            onClick={handleLogout}
+            title="Logout"
+          >
+            <FaSignOutAlt />
+          </button>
+        )}
+        <button
+          className="hamburger-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
 
       <nav className={`nav-item-container ${isMobileMenuOpen ? "active" : ""}`}>
         <Link to="/" className="nav-items" onClick={() => setIsMobileMenuOpen(false)}>

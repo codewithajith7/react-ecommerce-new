@@ -1,13 +1,210 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen',
+    'Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition:background .3s ease,color .3s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+code{
+  font-family:source-code-pro,Menlo,Monaco,Consolas,'Courier New',monospace;
+}
+
+/* ==========================
+        LIGHT MODE
+========================== */
+
+body.light{
+  background:#ffffff;
+  color:#111827;
+}
+
+/* ==========================
+        DARK MODE
+========================== */
+
+body.dark{
+  background:#0f172a;
+  color:#f8fafc;
+}
+
+/* Global Text */
+
+body.light{
+  background:#ffffff;
+  color:#111827;
+}
+
+body.dark{
+  background:#0f172a;
+  color:#f8fafc;
+}
+
+/* Links */
+
+body.dark a{
+  color:#60a5fa;
+}
+
+body.dark a:hover{
+  color:#22c55e;
+}
+
+/* Inputs */
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+  background:#1f2937;
+  color:#ffffff;
+  border:1px solid #374151;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+  color:#9ca3af;
+}
+
+/* Buttons */
+
+body.dark button{
+  color:#ffffff;
+}
+
+/* ==========================
+      PRODUCT CARD
+========================== */
+
+body.dark .product-card{
+  background:#111827 !important;
+  color:#ffffff !important;
+  border:1px solid #374151 !important;
+  box-shadow:0 8px 20px rgba(0,0,0,.4) !important;
+}
+
+body.dark .product-card h3,
+body.dark .product-card p,
+body.dark .product-card span{
+  color:#ffffff !important;
+}
+
+body.dark .product-card .price{
+  color:#22c55e !important;
+}
+
+body.dark .product-card button{
+  background:#2563eb;
+  color:#ffffff;
+  border:none;
+}
+
+body.dark .product-card button:hover{
+  background:#1d4ed8;
+}
+
+/* Wishlist */
+
+body.dark .wishlist-btn{
+  background:#1f2937;
+  color:#ff4d6d;
+}
+
+body.dark .wishlist-btn:hover{
+  background:#374151;
+}
+
+/* ==========================
+      CART
+========================== */
+
+body.dark .cart-container,
+body.dark .cart-card,
+body.dark .cart-item{
+  background:#111827;
+  color:#ffffff;
+}
+
+body.dark .cart-card p,
+body.dark .cart-card h3,
+body.dark .cart-item p,
+body.dark .cart-item h3{
+  color:#ffffff;
+}
+
+/* ==========================
+      WISHLIST
+========================== */
+
+body.dark .wishlist-container,
+body.dark .wishlist-card{
+  background:#111827;
+  color:#ffffff;
+}
+
+body.dark .wishlist-card h3,
+body.dark .wishlist-card p{
+  color:#ffffff;
+}
+
+/* ==========================
+      LOGIN / REGISTER
+========================== */
+
+body.dark .login-container,
+body.dark .register-container,
+body.dark .login-box,
+body.dark .register-box,
+body.dark form{
+  background:#111827;
+  color:#ffffff;
+}
+
+/* ==========================
+      TABLES
+========================== */
+
+body.dark table{
+  background:#111827;
+  color:#ffffff;
+}
+
+body.dark tr{
+  border-color:#374151;
+}
+
+/* ==========================
+      MODALS
+========================== */
+
+body.dark .modal,
+body.dark .popup{
+  background:#111827;
+  color:#ffffff;
+}
+
+/* ==========================
+      SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#64748b;
+  border-radius:20px;
+}
+
+body.dark::-webkit-scrollbar-thumb{
+  background:#475569;
+}
+
+/* ==========================
+      SELECTION
+========================== */
+
+::selection{
+  background:#2563eb;
+  color:#ffffff;
 }

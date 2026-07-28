@@ -1,0 +1,247 @@
+/* ====================================
+   GOOGLE FONT
+==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    background:#f5f7fb;
+}
+
+/* ====================================
+   LOGIN CONTAINER
+==================================== */
+
+.login-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#f8f9fc,#ece8ff);
+}
+
+/* ====================================
+   LOGIN CARD
+==================================== */
+
+.login-card{
+    width:95%;
+    max-width:1450px;
+    min-height:92vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+}
+
+/* ====================================
+   LEFT SIDE
+==================================== */
+
+.login-left{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:70px;
+}
+
+.login-left h1{
+    font-size:48px;
+    color:#2b174d;
+    margin-bottom:15px;
+}
+
+.login-left p{
+    color:#777;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+/* ====================================
+   FORM
+==================================== */
+
+.login-form{
+    width:100%;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group input{
+    width:100%;
+    height:58px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    background:#fafafa;
+    padding:0 18px;
+    font-size:16px;
+    transition:.3s;
+}
+
+.input-group input::placeholder{
+    color:#999;
+}
+
+.input-group input:focus{
+    outline:none;
+    border-color:#5b2e91;
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(91,46,145,.15);
+}
+
+/* ====================================
+   BUTTON
+==================================== */
+
+.login-btn{
+    width:100%;
+    height:58px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#4d1f7a,#6c2eb9);
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 15px 30px rgba(91,46,145,.35);
+}
+
+/* ====================================
+   REGISTER LINK
+==================================== */
+
+.register-text{
+    text-align:center;
+    margin-top:25px;
+    color:#666;
+}
+
+.register-link{
+    color:#5b2e91;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.register-link:hover{
+    text-decoration:underline;
+}
+
+/* ====================================
+   RIGHT SIDE
+==================================== */
+
+.login-right{
+    position:relative;
+    width:100%;
+    height:100%;
+    background-image:url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=80");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* Overlay */
+
+.login-right::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(41,18,71,.30),
+        rgba(41,18,71,.70)
+    );
+}
+
+/* ====================================
+   TEXT ON IMAGE
+==================================== */
+
+.overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:60px;
+    z-index:2;
+}
+
+.overlay h2{
+    font-size:46px;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.overlay p{
+    font-size:18px;
+    line-height:1.8;
+    max-width:500px;
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media(max-width:992px){
+
+.login-card{
+    width:100%;
+    min-height:100vh;
+    border-radius:0;
+    grid-template-columns:1fr;
+}
+
+.login-right{
+    display:none;
+}
+
+.login-left{
+    padding:40px 30px;
+}
+
+.login-left h1{
+    font-size:36px;
+}
+
+}
+
+@media(max-width:600px){
+
+.login-left{
+    padding:30px 20px;
+}
+
+.login-left h1{
+    font-size:30px;
+}
+
+.input-group input,
+.login-btn{
+    height:54px;
+}
+
+}

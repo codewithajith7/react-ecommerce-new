@@ -139,6 +139,16 @@ const Navbar = () => {
             </div>
           )}
         </div>
+
+        {user && (
+          <button
+            className="logout-mobile-btn"
+            onClick={handleLogout}
+          >
+            <FaSignOutAlt />
+            Logout
+          </button>
+        )}
       </nav>
     </div>
   );

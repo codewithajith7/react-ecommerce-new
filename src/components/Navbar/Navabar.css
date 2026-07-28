@@ -536,4 +536,32 @@ body.dark .hamburger-btn:hover {
         right: 0;
         box-shadow: 0 -10px 30px rgba(0,0,0,0.18);
     }
+
+    .user-menu .dropdown-menu {
+        display: none !important;
+    }
+
+    .logout-mobile-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: none;
+        border: none;
+        color: #ef4444 !important;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        padding: 8px 0;
+        font-size: 18px;
+        text-align: left;
+        transition: 0.3s;
+    }
+
+    .logout-mobile-btn svg {
+        font-size: 18px;
+    }
+}
+
+.logout-mobile-btn {
+    display: none;
 }

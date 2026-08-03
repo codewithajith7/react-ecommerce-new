@@ -6,7 +6,7 @@ const Home = () => {
   const handleScrollToArrivals = () => {
     const section = document.getElementById("new-arrivals-section");
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({behavior: "smooth"});
     }
   };
 
